@@ -27,7 +27,7 @@ public class Movie implements Serializable {
     private Long id;
 
     @NotNull(message = "Title may not be null")
-    @Column(name="title", length = 100)
+    @Column(name="title", length = 250)
     private String title;
 
     @Column(name="year", length = 4)

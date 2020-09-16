@@ -19,7 +19,6 @@ import javax.validation.Valid;
 import java.net.URI;
 import java.net.URISyntaxException;
 import java.time.LocalDate;
-import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -109,7 +108,7 @@ public class CommentController {
     @GetMapping({""})
     public ResponseEntity<List<CommentDTO>> getAllComments(@RequestParam(required = false) Long movieId){
         log.debug("REST request to get all comments");
-        List<CommentDTO> commentDTOList = new ArrayList<CommentDTO>();
+        List<CommentDTO> commentDTOList;
         if(movieId == null){
             commentDTOList = commentService.getAll();
         } else {

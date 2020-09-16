@@ -24,7 +24,7 @@ public class MovieDTO implements Serializable {
     private Long id;
 
     @NotBlank
-    @Size(max = 100)
+    @Size(max = 250)
     @ApiModelProperty(notes = "The title of the movie", example = "Matrix")
     @JsonProperty("Title")
     private String title;
